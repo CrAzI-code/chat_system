@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<body>
+    <div class="container">
+        <br>
+        <div class="card">
+            <div class="card-header">
+               <h2 style="text-align: center;"> Chat System </h2>
+            </div>
+        </div>
+        <br>
+
+          <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <form action="checkview" method="post">
+                    {% csrf_token %}
+                    <h4>Room Name</h4>
+                    <input class="form-control form-control-lg" type="text" name="room_name" placeholder="Enter Room Name">
+                    <h4>Username</h4>
+                    <input class="form-control form-control-lg" type="text" name="username" placeholder="Enter Username">
+                    <br>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Enter Room</button>
+                </form>
+               
+            </div>
+          </div>
+    </div>
+
+</body>
+
+
+
+
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+</html>
